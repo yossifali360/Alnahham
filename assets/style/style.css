@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@200&display=swap");
+body {
+  font-family: "El Messiri", sans-serif;
+}
+/* Start Navbar */
+.navbar-light {
+  box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.6);
+}
+.navbar .logo {
+  width: 220px;
+}
+.navbar .btn:hover {
+  background-color: red;
+}
+.navbar .active {
+  position: relative;
+  padding: 10px;
+}
+.nav-link:hover::before,
+.navbar .active::before,
+.nav-link:hover::after,
+.navbar .active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  width: 60%;
+  border-style: solid;
+  border-width: 1px 0px;
+  border-color: #d8d8d8;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-link:hover::before,
+.navbar .active::before {
+  bottom: 0;
+}
+.nav-link:hover::after,
+.navbar .active::after {
+  top: 0;
+}
+
+/* End Navbar */
+/* Start First Section */
+.First {
+  background-color: #ececec;
+  height: 70vh;
+  width: 100%;
+}
+.First .overlay {
+  background-image: url(../imgs/shape3.png);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.First .overlay .container h4 {
+  font-size: 70px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+.First .overlay .container h2 {
+  font-size: 90px;
+}
+.btnctn .btn {
+  font-size: 20px;
+  white-space: nowrap;
+}
+.scroll {
+  bottom: 50px;
+  left: 10%;
+}
+.scroll img {
+  width: 100px;
+  margin-top: 35px;
+}
+/* End First Section */
+/* Start second Section */
+.Second .right img,
+.Second .left img {
+  width: 90px;
+}
+.Second .right img:hover,
+.Second .left img:hover {
+  animation: rotate linear 0.5s 1;
+}
+.Second .middle img {
+  height: 350px;
+  width: 100%;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+/* End second Section */
+/* Start third Section */
+.third .shape {
+  top: -200px;
+  left: -10px;
+  z-index: -2;
+}
+.third .back .container .banner {
+  margin: auto;
+  width: 100%;
+  background-image: url(../imgs/mobile-8-scaled.jpg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  height: 300px;
+}
+.third .back .container .overlay {
+  background-color: rgba(0, 0, 0, 0.615);
+  height: 100%;
+  width: 100%;
+}
+.third .shape2 {
+  background-color: #ececec;
+  height: 350px;
+  width: 50%;
+  z-index: -3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* End third Section */
+/* Start Last Section */
+.card {
+  overflow: hidden;
+  border: none;
+}
+.card:hover .card-img-top {
+  transform: scale(1.2, 1.2);
+}
+.card-img-top {
+  margin-top: 10px;
+  background-color: #ececec;
+  width: 70%;
+  z-index: -1;
+}
+.icons {
+  top: 50%;
+  right: 0;
+  opacity: 0;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 50px;
+  transform: translateY(-50%);
+  box-shadow: 24px 13px 46px 11px rgba(48, 117, 208, 0.85);
+  transition: 0.5s ease-in-out;
+}
+.icon-text {
+  background-color: transparent;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  line-height: 20px;
+}
+.hiddenHeart {
+  visibility: hidden;
+  display: block;
+}
+.hiddenSearch {
+  visibility: hidden;
+  display: block;
+}
+#hiddenHeart {
+  visibility: hidden;
+  display: block;
+}
+#hiddenSearch {
+  visibility: hidden;
+  display: block;
+}
+.card:hover .icons {
+  right: 80%;
+  opacity: 1;
+}
+.icons i:hover {
+  background-color: #ff0000;
+  border-radius: 50px;
+}
+.discount {
+  background-color: #fff;
+  top: 30px;
+  right: 20px;
+  box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.46);
+  transition: 0.5s;
+}
+.discount:hover {
+  background-color: rgb(0, 0, 255);
+  color: #fff;
+}
+.all {
+  gap: 1rem;
+}
+.all i {
+  background-color: black;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 50%;
+  align-items: stretch;
+}
+.all p {
+  margin-top: 13px;
+}
+/* End Last Section */
+/* Media Query */
+@media screen and (max-width: 768px) {
+  .First .overlay .container h4 {
+    font-size: 40px;
+  }
+  .First .overlay .container h2 {
+    font-size: 50px;
+  }
+  .nav-link:hover::before,
+  .navbar .active::before {
+    right: 0;
+    transform: translate(0);
+  }
+  .nav-link:hover::after,
+  .navbar .active::after {
+    display: none;
+  }
+  .navbar .btn {
+    display: block;
+    width: 100%;
+  }
+  .card:hover .icons {
+    right: 70%;
+    opacity: 1;
+  }
+  .third .text {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .third .back .container-fluid .banner {
+    background-size: cover;
+    background-attachment: scroll;
+    height: 250px;
+  }
+  .third .overlay {
+    height: 250px;
+  }
+  .third .shape2 {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .discount {
+    top: -5px;
+    right: 5px;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .discount {
+    top: 0;
+    right: 5px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .discount {
+    top: 30px;
+    right: 20px;
+  }
+}
